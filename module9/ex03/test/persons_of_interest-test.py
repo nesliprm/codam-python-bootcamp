@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 def famous_births(people_dict):
-    sorted_dict=sorted(people_dict.items(), key=lambda item: list(item[1].values())[1])
+
+    def birthyears(data):
+        return list(data[1].values())[1]
+    
+    sorted_dict=sorted(people_dict.items(), key=birthyears)
     for name, info in sorted_dict:
         name=list((info).values())[0]
         birthyear=list(info.values())[1]
@@ -9,7 +13,6 @@ def famous_births(people_dict):
         print(f"{name} is a great scientist born in {birthyear}.")
 
     
-
 women_scientists = {
     "ada": { "name": "Ada Lovelace", "date_of_birth": "1815" },
     "cecilia": { "name": "Cecila Payne", "date_of_birth": "1900" },
