@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
 def find_the_redheads(fam_members):
-    names=fam_members.keys()
-    if 
-
-
-
-
+    
+    filtered=filter(lambda name:fam_members[name] == 'red', fam_members.keys())
+    return list(filtered)
 
 
 
