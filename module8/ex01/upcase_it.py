@@ -2,13 +2,11 @@
 
 import sys
 
-def upcase_it():
-    if len(sys.argv)!=2:
-        print("none")
-    else:
-        print(sys.argv[1].upper())
+def upcase_it(word):
+    
+        print(word.upper())
 
-upcase_it()
+upcase_it('hello')
 
     
 
